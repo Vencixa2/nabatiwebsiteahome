@@ -124,7 +124,7 @@ Form Submitted
 }
 .checkmark {
     scale: 6;
-    margin-top: 300px;
+    margin-top: 20%;
     color: #00971e;
 }
 .go-back-submitted {
@@ -165,7 +165,7 @@ Footer
     background-color: #333;
     width: 100%;
     height: 200px;
-    margin-top: 500px;
+    margin-top: 800px;
 }
 
 /*
@@ -175,11 +175,33 @@ Mobile
 */
 
 @media (max-width: 768px) {
+
+    /*
+
+    Form
+
+    */
+
     .form-wrapper {
-        width: 90%; /* Adjust width for smaller screens */
-        max-width: 500px; /* Limit maximum width */
-        margin-top: 50px; /* Adjust margin top */
-        height: auto; /* Allow height to adjust based on content */
-        padding: 20px; /* Add padding for better spacing */
+        width: 80%;
+        padding-right: 20px;
+        padding-left: 20px;
+        
     }
+    .form {
+        align-items: center;
+    }
+    .form-name {
+        width: 80%;
+    }
+    .form-number {
+        width: 80%;
+    }
+    .form-details {
+        width: 80%;
+    }
+    .form-submit {
+        width: 90%;
+    }
+
 }
