@@ -8,7 +8,15 @@ body {
 }
 ::-webkit-scrollbar {
     display: none;
-  }
+}
+.shadow {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #000;
+    opacity: 0.5;
+    display: none;
+}
 
 /*
 
@@ -39,16 +47,67 @@ textarea:focus {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-left: 10px;
+}
+.form-wrapper {
+    display: none;
+    justify-content: center;
+    margin-top: 100px;
+    background-color: #fff;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 550px;
+    border-radius: 20px;
 }
 .form-name {
-    margin-top: 10px;
+    height: 50px;
+    width: 350px;    
+    font-size: 20px;
+    margin-top: 70px;
+}
+.form-number {
+    height: 50px;
+    width: 350px;    
+    font-size: 20px;
 }
 .form-details {
-    height: 100px;
+    width: 350px;
+    height: 200px;
+    font-size: 20px;
 }
 .form-submit {
-    width: 320px;
+    width: 370px;
+    height: 40px;
+    background: #fff04b;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;    
+}
+.form-submit:hover {
+    background-color: #dccc18;
+}
+.fa-times {
+    scale: 2;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: #c3c3c3;
+    cursor: pointer;
+}
+
+/*
+
+Form Appear/Disappear
+
+*/
+
+.form-wrapper.active {
+    display: flex;
+}
+.shadow.active {
+    display: block;
 }
 
 /*
@@ -57,7 +116,7 @@ Form Submitted
 
 */
 
-.submitted-wrapper {
+.wrapper-submitted {
     text-align: center;
 }
 .text-submitted {
@@ -94,4 +153,33 @@ Header
 }
 .appointment:hover {
     background: #dccc18;
+}
+
+/*
+
+Footer
+
+*/
+
+.footer-content {
+    background-color: #333;
+    width: 100%;
+    height: 200px;
+    margin-top: 500px;
+}
+
+/*
+
+Mobile
+
+*/
+
+@media (max-width: 768px) {
+    .form-wrapper {
+        width: 90%; /* Adjust width for smaller screens */
+        max-width: 500px; /* Limit maximum width */
+        margin-top: 50px; /* Adjust margin top */
+        height: auto; /* Allow height to adjust based on content */
+        padding: 20px; /* Add padding for better spacing */
+    }
 }
